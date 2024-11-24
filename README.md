@@ -1,4 +1,4 @@
-# Rendering Methods on Next.js
+# Rendering Methods on Next.js 15
 
 - In this repository, you will find a brief explanation of each rendering method, its use cases, and how to implement them in Next.js using the App Router.
 - It's important to note that in a production scenario, you can combine different rendering methods in Next.js. This is achieved by following the [Composition Patterns](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#client-components).
