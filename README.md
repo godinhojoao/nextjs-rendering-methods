@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rendering Methods on Next.js
 
-## Getting Started
+- In this repository, you will find a brief explanation of each rendering method, its use cases, and how to implement them in Next.js using the App Router.
+- It's important to note that in a production scenario, you can combine different rendering methods in Next.js. This is achieved by following the [Composition Patterns](https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#client-components).
+  - The idea is to use client components only where necessary, while relying on server components for the rest.
+  - This approach lets you leverage the strengths of both methods: reducing your bundle size by rendering parts of your page on the server and ensuring interactivity through client APIs and React state management in client components.
 
-First, run the development server:
+## How to run
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `nvm i 22`
+- `nvm use`
+- `npm i`
+- `npm run local-with-server`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Examples
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Please read the content of each file for a better understanding of these examples.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ### Static Site Generation (SSG)
 
-## Learn More
+  - **[Fetching directly on page](./_readme-videos//ssg-fetching-directly.mov)**
+  - **[Fetching with generateStaticParams](./_readme-videos/ssg-generateStaticParams.mov)**
 
-To learn more about Next.js, take a look at the following resources:
+- ### [Server Side-Rendering (SSR)](./_readme-videos/ssr.mov)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ### [Incremental Static Regeneration (ISR)](./_readme-videos/isr.mov)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ### [Client Site Rendering (CSR)](./_readme-videos/csr.mov)
 
-## Deploy on Vercel
+- ### [Composition Pattern: SSG + CSR](./_readme-videos/ssg-and-csr.mov)
+  - **Notes**:
+    - If JavaScript is disabled, the SSG part continues to work, but the CSR part will stop.
+    - You can implement the composition pattern using any rendering method. For this brief example and comparison, I chose SSG + CSR.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## References
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- https://nextjs.org/docs/app/building-your-application/rendering
+- https://nextjs.org/docs/app/building-your-application/rendering/server-components
+- https://nextjs.org/docs/app/building-your-application/rendering/client-components
+- https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns
+- https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
+- https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration
+- https://nextjs.org/docs/app/api-reference/functions/generate-static-params
+- https://nextjs.org/docs/app/api-reference/functions/revalidatePath
+- https://nextjs.org/docs/app/api-reference/functions/revalidateTag
+- https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamicparams
+- https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
